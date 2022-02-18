@@ -22,6 +22,9 @@ body{
      ---------------------------------------------------------
    */
 
+
+
+
 /* ------------------HEADER -----------------------*/
 
 
@@ -70,6 +73,7 @@ img{
         height: 40px;
         text-align: center;
         font-weight: 500;
+
 
         &:hover{
          background-color: white;
@@ -136,6 +140,7 @@ img{
     justify-content: center;
     align-items: center;
     align-content: stretch;
+
     h2{
       font-size: 2.5em;
       width:440px;
@@ -146,8 +151,14 @@ img{
       width: 430px;
     }
     div{
-      margin-right: 300px;
+        margin-right: 300px;
         color:#222e3d;
+        border-bottom-style: solid;
+        border-bottom-color: #fef0c0;
+        border-bottom-width:0.4em;
+        &:hover{
+          border-bottom-color: #ffd101;
+        }
     }
 
   }
@@ -183,6 +194,13 @@ img{
       }
       div{
         margin-right: 300px;
+        border-bottom-style: solid;
+        border-bottom-color: #f9d8d4;
+        border-bottom-width:0.4em;
+        &:hover{
+
+          border-bottom-color: #fe7263;
+        }
       }
      }
      article:nth-child(5){
@@ -206,6 +224,7 @@ img{
          width: 400px;
          font-weight:600;
          color:#2c7566;
+
        }
 
       }
@@ -267,10 +286,15 @@ img{
       margin-top: 100px;
       text-align: center;
 
+      &:hover{
+
+        box-shadow: 2px 5px 5px grey;
+      }
 
       img{
         width:90px;
         clip-path:ellipse(50% 50%);
+
       }
       p{
         font-family: 'Barlow', sans-serif;
@@ -316,6 +340,7 @@ grid-row-gap: 0px;
 article{
   height:500px;
   width:100%;
+
  }
  article:nth-child(1){
    background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
@@ -447,11 +472,11 @@ body{
 @media only screen and (max-width:900px) {
 	.gri{
     display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
+	  flex-direction: column;
+	  flex-wrap: nowrap;
+	  justify-content: center;
+	  align-items: center;
+	  align-content: stretch;
 
     article:nth-child(2){
     width: 500px;
@@ -503,10 +528,10 @@ body{
 
   .sectionT{
     display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-column-gap: 0px;
+   grid-row-gap: 0px;
 
    article{
      height: 300px;
@@ -557,6 +582,7 @@ visibility: hidden;
   transform:translate(0%);
   margin-top: 50px;
   visibility: hidden;
+  z-index: 1;
  }
 .nav-change{
   transform:translate(0%);
@@ -615,11 +641,13 @@ visibility: hidden;
  height: 40px;
  text-align: center;
  font-weight: 500;
+ padding-top: 10px;
  &:hover{
   background-color: white;
   border-radius: 25px;
   font-weight: bold;
   color:black;
+  box-shadow: 2px 5px 5px grey;
 }
 }
 .nav-link{
@@ -650,7 +678,7 @@ transition: 0.4s;
   0% {
     animation-timing-function: ease-in;
     opacity: 1;
-    transform: translateY(-45px);
+    transform: translateY(-15px);
   }
 
   24% {
@@ -659,22 +687,22 @@ transition: 0.4s;
 
   40% {
     animation-timing-function: ease-in;
-    transform: translateY(-24px);
+    transform: translateY(-10px);
   }
 
   65% {
     animation-timing-function: ease-in;
-    transform: translateY(-12px);
+    transform: translateY(-7px);
   }
 
   82% {
     animation-timing-function: ease-in;
-    transform: translateY(-6px);
+    transform: translateY(-5px);
   }
 
   93% {
     animation-timing-function: ease-in;
-    transform: translateY(-4px);
+    transform: translateY(-2px);
   }
 
   25%,
@@ -682,12 +710,12 @@ transition: 0.4s;
   75%,
   87% {
     animation-timing-function: ease-out;
-    transform: translateY(0px);
+    transform: translateY(3px);
   }
 
   100% {
     animation-timing-function: ease-out;
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(6px);
   }
 }
