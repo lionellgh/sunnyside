@@ -1,0 +1,14 @@
+// ./scss/framework/modules/_boites.scss
+// MODULE DES BOITES
+
+  .boite_dimension__fixe {
+    width: 100%;
+    max-width: $boiteDimensionFixe;
+    margin: auto;
+  
+  }
+
+  .boite_bords {
+    border: $boiteBordsCouleur $boiteBordsDimension solid;
+    padding: $boitePadding;
+  }

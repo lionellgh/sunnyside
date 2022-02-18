@@ -1,0 +1,109 @@
+// ./scss/framework/modules/_grilles.scss
+// MODULE DES GRILLES
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat($grilleNombreColonnes, 1fr);
+  grid-gap: $grilleGoutiereHorizontale $grilleGoutiereVerticale;
+  margin: 0;
+ padding: 0;
+ list-style: none;
+}
+/* MOBILE FIRST :
+   Tous les enfants directs de .grille prennent
+   par défaut les 12 colonnes
+*/
+.grille > * {
+  grid-column: span $grilleNombreColonnes;
+
+}
+
+// .col-xs1, ..., .col-xs12 : ecrans XS (> 0 px)
+// .row-xs1, ..., .row-xs12 : ecrans XS (> 0 px)
+@for $i from 1 through $grilleNombreColonnes {
+  .col-xs#{$i} {
+    grid-column: span #{$i};
+  }
+  .row-xs#{$i} {
+    grid-row: span #{$i};
+  }
+}
+
+// .col-s1, ..., .col-s12 : ecrans S (> 576 px)
+// .row-s1, ..., .row-s12 : ecrans S (> 576 px)
+@media screen and (min-width : 576px){
+  @for $i from 1 through $grilleNombreColonnes {
+    .col-s#{$i} {
+      grid-column: span #{$i};
+    }
+    .row-s#{$i} {
+      grid-row: span #{$i};
+    }
+  }
+}
+
+// .col-m1, ..., .col-m12 : ecrans M (>  768 px)
+// .row-m1, ..., .row-m12 : ecrans M (> 768 px)
+@media screen and (min-width : 768px){
+  @for $i from 1 through $grilleNombreColonnes {
+    .col-m#{$i} {
+      grid-column: span #{$i};
+    }
+    .row-m#{$i} {
+      grid-row: span #{$i};
+    }
+  }
+}
+
+// .col-l1, ..., .col-l12 : ecrans L (> 992 px)
+// .row-l1, ..., .row-l12 : ecrans L (> 992 px)
+@media screen and (min-width : 992px){
+  @for $i from 1 through $grilleNombreColonnes {
+    .col-l#{$i} {
+      grid-column: span #{$i};
+    }
+    .row-l#{$i} {
+      grid-row: span #{$i};
+    }
+  }
+}
+
+// .col-xl1, ..., .col-xl12 : ecrans XL (> 1200 px)
+// .row-xl1, ..., .row-xl12 : ecrans XL (> 1200 px)
+@media screen and (min-width : 576px){
+  @for $i from 1 through $grilleNombreColonnes {
+    .col-xl#{$i} {
+      grid-column: span #{$i};
+    }
+    .row-xl#{$i} {
+      grid-row: span #{$i};
+    }
+  }
+}
+
+@each $taille, $dimension in $grilleBreakPoints{
+  @media screen and (min-width : #{$dimension}){
+    @for $i from 1 through $grilleNombreColonnes {
+      .col-#{$taille}#{$i} {
+        grid-column: span #{$i};
+      }
+      .row-#{$taille}#{$i} {
+        grid-row: span #{$i};
+     }
+   }
+ }
+}
+
+/* Toutes les étiquettes c1 ... c12 */
+@for $i from 1 through $grilleNombreColonnes {
+  .c#{$i} {
+    grid-column: span #{$i};
+  }
+}
+
+/* Toutes les étiquettes r1 ... r12 */
+@for $i from 1 through $grilleNombreColonnes {
+  .r#{$i} {
+    grid-row: span #{$i};
+  }
+}

@@ -1,0 +1,76 @@
+// ./scss/framework/_variables.scss
+// PARAMETRES DU FRAMEWORK
+
+/*
+    1. LES COULEURS
+    2. LES BOITES
+    3. LES TEXTES
+    4. LES MENUS
+    5. LES GRILLES
+ */
+
+/* -----------------------------------------
+     1. LES COULEURS
+   ----------------------------------------- */
+  // PALETTE DE COULEURS
+    $couleur1: #ebe8de;
+    $couleur1Claire: #99FD41;
+    $couleur1Foncee: #00BB41;
+
+    $couleur2: orange;
+    $couleur2Claire: orange;
+    $couleur2Foncee: orange;
+
+  // COULEURS NEUTRES
+    $couleurN1: #333333;
+    $couleurN1Claire: #999;
+    $couleurN1Foncee: #333;
+
+/* -----------------------------------------
+     2. LES BOITES
+   ----------------------------------------- */
+  $boiteDimensionFixe: 800px;
+  $boiteBordsDimension: 2px;
+  $boiteBordsCouleur: $couleurN1;
+  $boitePadding: 2rem;
+
+/* -----------------------------------------
+     3. LES TEXTES
+   ----------------------------------------- */
+
+  $texteFont1: Georgia, Times, serif;
+  $texteTailleGrand: 3rem;
+  $texteTailleMedium: 1.2rem;
+  $texteTaillePetit: .8rem;
+
+/* -----------------------------------------
+     4. LES MENUS
+   ----------------------------------------- */
+// MENU_TYPE__HORIZONTAL
+    $menuGoutiere: 1px;
+    $menuJustifyContent: flex-start;
+    /* flex-start, flex-end, center,
+       space-between, space-around, stretch */
+
+       $menuAlignVertical: center;
+  /* stretch, center, baseline */
+
+    // Etat normal
+    $menuCouleurNormal: #fff;
+    $menuCouleurTexteNormal: $couleurN1;
+
+    // Etat actif et hover
+    $menuCouleurActif: $couleurN1;
+    $menuCouleurTexteActif: #e56038;
+
+/* -----------------------------------------
+     5. LES GRILLES
+   ----------------------------------------- */
+  $grilleNombreColonnes:       12;
+  $grilleGoutiereHorizontale: 1rem;
+  $grilleGoutiereVerticale:   3rem;
+  $grilleBreakPoints      :   ('xs':'0',
+                               's':'576px',
+                               'm':'768px',
+                               'l':'992px',
+                              'xl':'1200px');
