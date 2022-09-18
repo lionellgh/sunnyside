@@ -1,7 +1,7 @@
 # About The Project 
 ![image](https://user-images.githubusercontent.com/98813616/190920694-0bca0a45-dfda-41ed-8a6d-81767bae8907.png)
 
-Simple responsive Showcase site 
+Simple responsive showcase site 
 
 <br/>
 
